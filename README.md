@@ -1,6 +1,6 @@
 # Feed Reader
 
-![Image of jasmine program](/img/jasmine.png)
+![Image of jasmine program](/jasmine.png)
 
 ## How to Run this project
 
