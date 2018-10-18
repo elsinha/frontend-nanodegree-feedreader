@@ -44,6 +44,7 @@ $(function() {
     it('name defined', function() {
       allFeeds.forEach(feed => {
         expect(feed.name).toBeDefined();
+        expect(feed.name).not.toBe('');
       });
     });
 
@@ -102,18 +103,22 @@ $(function() {
    */
   describe('New Feed Selection', () => {
     let initFeed;
+    let secondFeed;
     beforeEach(done => {
       loadFeed(2, () => {
         initFeed = $('.feed').html();
+        done();
       });
+    });
+    beforeEach(done => {
       loadFeed(1, () => {
+        secondFeed = $('.feed').html();
         done();
       });
     });
     it('Load Feed', () => {
-      let loadFeed = $('.feed').html();
-      expect(initFeed).not.toBe(loadFeed);
+      expect(initFeed).not.toBe(secondFeed);
     })
   })
 
-});
+}());
