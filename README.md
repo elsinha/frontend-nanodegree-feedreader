@@ -4,8 +4,6 @@
 
 ## How to Run this project
 
-[View it now!](https://elsinha.github.io/frontend-nanodegree-feedreader/)
- or
 [Download this repository.](https://github.com/elsinha/frontend-nanodegree-feedreader.git) Double click on the html file to run the application.
 
 ## Contributing
