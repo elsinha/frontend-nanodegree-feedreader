@@ -36,7 +36,14 @@ $(function() {
         expect(feed.url).not.toBe('');
       });
     });
-
+    // Another approach using jquery would be:
+    //
+    // it('has URL defined and they are not empty', function() {
+    //           allFeeds.forEach(function(feed) {
+    //                 expect(feed.url).toBeDefined();
+    //                 expect(feed.url.length).not.toBe(0);
+    //           });
+    // });
     /* Write a test that loops through each feed
      * in the allFeeds object and ensures it has a name defined
      * and that the name is not empty.
@@ -49,6 +56,15 @@ $(function() {
     });
 
   });
+
+//   Another approach using jquery would be:
+//
+// it('has name defined and they are not empty', function() {
+//             allFeeds.forEach(function(feed) {
+//                 expect(feed.name).toBeDefined();
+//                 expect(feed.name.length).not.toBe(0);
+//             });
+// });
 
   /* Write a new test suite named "The menu" */
 
@@ -122,3 +138,22 @@ $(function() {
   })
 
 }());
+
+// Another approach using jquery would be:
+//
+// describe('New Feed Selection', function() {
+//         var oldFeed;
+//
+//         beforeEach(function(done) {
+//             loadFeed(0, function() {
+//                 // store old feed
+//                 oldFeed = $('.feed').html();
+//                 // fetch newer feed
+//                 loadFeed(1, done);
+//             });
+//         });
+//
+//         it('is different from old', function() {
+//             expect($('.feed').html()).not.toBe(oldFeed);
+//         });
+//     });
